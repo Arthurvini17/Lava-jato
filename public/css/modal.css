@@ -1,0 +1,16 @@
+.container-modal {
+    background-color: #FFF;
+
+}
+
+.form-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+svg {
+    cursor: pointer;
+}
+
