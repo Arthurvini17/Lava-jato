@@ -1,6 +1,57 @@
-.container-modal {
-    background-color: #FFF;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+
+:root {
+    --cor-primaria: #002333;
+    --cor-secundaria: #B4BEC9;
+    --cor-table: #159A9C;
+}
+
+* {
+
+    font-family: 'Poppins';
+    padding: 0;
+    margin: 0;
+
+}
+
+header {
+    background-color: var(--cor-secundaria);
+    height: 10vh;
+  
+}
+
+nav {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 10px;
+    margin-right: 10px;
+}
+
+.navigation {
+    margin-top: 30px;
+}
+
+.button-nav {
+    background-color: var(--cor-table);
+    border: var(--cor-table);
+    padding: 3px;
+    color: #000;
+    font-weight: bolder;
+    cursor: pointer;
+   
+}
+
+.container-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+    z-index: 1;
+    padding: 30px;
 }
 
 .form-header {
@@ -14,3 +65,34 @@ svg {
     cursor: pointer;
 }
 
+
+.container-input {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+
+
+}
+
+.form-input input {
+    border-radius: 3px;
+    border: 1px solid #a09f9f;
+    width: 100%;
+    outline-style: none;
+}
+
+.submit-button {
+    border-radius: 3px;
+    margin-top: 4px;
+    cursor: pointer;
+    color: #000;
+    font-weight: bolder;
+    padding: 3px;
+    background-color: rgb(0, 204, 255);
+    border: rgb(0, 204, 255);
+    transition: background-color 200ms ease-in-out;
+}
+
+.submit-button:hover {
+    background-color: rgb(0, 119, 255);
+}

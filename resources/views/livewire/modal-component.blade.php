@@ -1,9 +1,24 @@
 <div class="container">
     <link rel="stylesheet" href="{{ asset('css/modal.css') }}">
     <header>
-        <div>
-            <button wire:click="open">Agendamento</button>
-        </div>
+        <nav>
+            <div class="text-prin">
+                <h1>Lava-Jato</h1>
+            </div>
+
+            @auth
+                <div class="navigation">
+                    <button class="button-nav">Sair</button>
+                </div>
+            @else
+                <div class="navigation">
+                    <button class="button-nav" wire:click="open">Agendamento</button>
+
+                    <button class="button-nav">Registrar</button>
+                </div>
+            @endauth
+          
+        </nav>
     </header>
     @if ($isOpen)
         <div class="container-modal" wire:transition>
@@ -21,7 +36,35 @@
                 </div>
             </header>
             <div class="box-form">
-                <form action="">
+                <form wire:submit="addVeic">
+
+                    <div class="container-input">
+                        <div class="form-input">
+                            <label for="name">Nome</label>
+                            <input type="text" name="name" wire:model.live="name"
+                                placeholder="Nome do cliente...">
+                        </div>
+
+                        <div class="form-input">
+                            <label for="placa">Placa</label>
+                            <input type="text" name="placa" wire:model.live="placa"
+                                placeholder="Placa do veiculo...">
+                        </div>
+
+                        <div class="form-input">
+                            <label for="modelo">Modelo</label>
+                            <input type="text" name="modelo" wire:model.live="modelo"
+                                placeholder="Modelo do veiculo...">
+                        </div>
+
+                        <div class="form-input">
+                            <label for="chassi">Chassi</label>
+                            <input type="text" name="chassi" wire:model.live="chassi"
+                                placeholder="Chassi do veiculo...">
+                        </div>
+
+                    </div>
+                    <button class="submit-button" wire:submit>Agendar</button>
                 </form>
             </div>
         </div>

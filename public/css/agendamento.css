@@ -16,3 +16,22 @@ body {
     font-family: 'Poppins';
 
 }
+
+table {
+    width: 100%;
+}
+
+
+table thead {
+    background-color: var(--cor-secundaria);
+}
+
+.corpo-tabela tr {
+    color: #fff;
+}
+
+.
+
+.corpo-tabela tr:hover {
+    background-color: #3498db;
+}
