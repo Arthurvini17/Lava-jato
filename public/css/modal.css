@@ -15,8 +15,8 @@
 
 }
 
-header {
-    background-color: var(--cor-secundaria);
+.container-header {
+   background-color: #000;
     height: 10vh;
   
 }
@@ -70,8 +70,6 @@ svg {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
-
-
 }
 
 .form-input input {

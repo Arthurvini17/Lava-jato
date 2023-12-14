@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\VeicController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +18,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/', [HomeController::class, 'index'])->name('welcome');
+
+Route::get('/edit/{veiculo}/edit', [VeicController::class, 'edit'])->name('edit.veic');
+
+Route::post('/veiculo/{veiculo}', [VeicController::class, 'update'])->name('update.veic');

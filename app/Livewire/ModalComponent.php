@@ -52,8 +52,12 @@ class ModalComponent extends Component
 
         $this->reset(['name', 'placa', 'modelo', 'chassi']);
     }
+
+   
     public function render()
     {
         return view('livewire.modal-component');
     }
+
+    
 }

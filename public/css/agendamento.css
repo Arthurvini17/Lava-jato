@@ -7,31 +7,99 @@
 }
 
 
-*{
+* {
     font-family: 'Poppins';
 
 }
+
 body {
-    background-color: var(--cor-primaria);
+    background-color: #fff;
     font-family: 'Poppins';
 
 }
 
 table {
     width: 100%;
+    background-color: #159A9C;
+    border: 1px solid #000000;
+    border-radius: 3px;
+
 }
 
 
 table thead {
-    background-color: var(--cor-secundaria);
+    color: #fff;
+    background-color: var(--cor-primaria);
 }
 
 .corpo-tabela tr {
     color: #fff;
 }
 
-.
+
+
 
 .corpo-tabela tr:hover {
-    background-color: #3498db;
+    background-color: #000000;
 }
+
+.container-table {
+    padding: 30px;
+}
+
+
+.container-table nav {
+    display: none;
+}
+
+.searchs {
+    margin-right: 10px;
+    padding: 3px;
+}
+
+.searchs input {
+    padding: 3px;
+    outline-style: none;
+
+}
+
+.searchs select {
+    color: #fff;
+    background-color: #002333;
+    padding: 3px;
+
+}
+
+.searchs option {
+    color: #fff;
+    font-weight: bolder;
+
+}
+
+.action-button {
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.delete-button {
+    border: none;
+    background-color: rgb(240, 19, 19);
+    padding: 3px;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 1px;
+    cursor: pointer;
+}
+
+.edit-button {
+    cursor: pointer;
+    border-radius: 1px;
+    padding: 3px;
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    background-color: var(--cor-primaria);
+}
+

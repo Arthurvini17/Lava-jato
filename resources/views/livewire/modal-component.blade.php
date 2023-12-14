@@ -1,6 +1,6 @@
 <div class="container">
     <link rel="stylesheet" href="{{ asset('css/modal.css') }}">
-    <header>
+    <header class="container-header">
         <nav>
             <div class="text-prin">
                 <h1>Lava-Jato</h1>
@@ -17,7 +17,7 @@
                     <button class="button-nav">Registrar</button>
                 </div>
             @endauth
-          
+
         </nav>
     </header>
     @if ($isOpen)

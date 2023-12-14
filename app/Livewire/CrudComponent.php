@@ -13,12 +13,22 @@ class CrudComponent extends Component
 
   public $search = '';
   public $numberRows = 5;
+
+
+  
     public function render()
     {
         $veiculos = Veiculos::all();
 
-        $veiculos = Veiculos::where('name', 'like', '%' . $this->search . '%')->paginate($this->numberRows);
+        $veiculos = Veiculos::where('placa', 'like', '%' . $this->search . '%')
+        ->orWhere('name', 'like', '%' . $this->search . '%')
+        ->paginate($this->numberRows);
 
         return view('livewire.crud-component', ['veiculos' => $veiculos]);
     }
+
+    public function delete(Veiculos $veiculos){
+      $veiculos->delete();
+  }
+  
 }
